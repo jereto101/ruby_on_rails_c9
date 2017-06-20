@@ -21,7 +21,7 @@ class PortfoliosController < ApplicationController
   end
   
   def index
-    @portfolio_item = Portfolio.all
+    @portfolio_item = Portfolio.ruby_on_rails_portfolio_items
   end
   
   def edit
