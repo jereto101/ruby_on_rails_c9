@@ -17,11 +17,11 @@ class PortfoliosController < ApplicationController
   end
   
   def show
-    @portfolio_item = Portfolio.all
+     @portfolio_item = Portfolio.find(params[:id])
   end
   
   def index
-    @portfolio_item = Portfolio.all
+    @portfolio_item = Portfolio.ruby_on_rails_portfolio_item
   end
   
   def edit
