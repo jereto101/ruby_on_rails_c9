@@ -7,7 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
-  <% render "shared/nav" %>
+  <%= render "shared/nav", location:'top' %>
   
   <body>
     <p class="notice"><%= notice %></p>
@@ -21,7 +21,7 @@
     <% end %>  
     
     <%= yield %>
-    
+      
     <% if session[:source] %>
       <p>Thanks for visiting me from <%= session[:source] %></p>
     <% end %>

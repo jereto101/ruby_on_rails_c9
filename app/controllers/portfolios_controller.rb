@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
     layout "portfolios"
+    
     def index
         @portfolio_items = Portfolio.all
     end
@@ -31,6 +32,7 @@ class PortfoliosController < ApplicationController
  
     def edit
         @portfolio_item = Portfolio.find(params[:id])
+        3.times { @portfolio_item.technologies.build }
     end
 
     def update
@@ -65,6 +67,7 @@ class PortfoliosController < ApplicationController
             :subtitle,
             :body, 
             technologies_attributes: [:name]
+            
         )
     end  
 end
