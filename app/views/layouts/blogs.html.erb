@@ -3,17 +3,9 @@
   <head>
     <title><%=@page_title%></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  
-  <div>
-    <div><%= link_to "Home", root_path %></div>
-    <div><%= link_to "About", about_path %></div>
-    <div><%= link_to "Contacts", contact_path %></div>
-    <div><%= link_to "Blogs", blogs_path %></div>
-    <div><%= link_to "Portfolios", portfolios_path %></div>
-  </div>
 
   <body>
     <p class="notice"><%= notice %></p>
@@ -31,6 +23,14 @@
     <% if session[:source] %>
       <p>Thanks for visiting me from <%= session[:source] %></p>
     <% end %>
-    
+      
+  <div>
+    <div><%= link_to "Home", root_path %></div>
+    <div><%= link_to "About", about_path %></div>
+    <div><%= link_to "Contacts", contact_path %></div>
+    <div><%= link_to "Blogs", blogs_path %></div>
+    <div><%= link_to "Portfolios", portfolios_path %></div>
+  </div>
+
   </body>
 </html>
