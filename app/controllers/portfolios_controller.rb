@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
     layout "portfolios"
+    
     def index
         @portfolio_items = Portfolio.all
     end
@@ -31,6 +32,7 @@ class PortfoliosController < ApplicationController
  
     def edit
         @portfolio_item = Portfolio.find(params[:id])
+        3.times { @portfolio_item.technologies.build }
     end
 
     def update
@@ -45,15 +47,11 @@ class PortfoliosController < ApplicationController
     end
   
     def destroy
-        # Perform the lookup
-        @portfolio_item = Portfolio.find(params[:id])
-
-        # Destroy/delete the record
         @portfolio_item.destroy
-
-        # Redirect
+    
         respond_to do |format|
-            format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
+            format.html { redirect_to portfolios_url, notice: 'Record was Removed.' }
+            format.json { head :no_content }
         end
     end
 
@@ -65,6 +63,7 @@ class PortfoliosController < ApplicationController
             :subtitle,
             :body, 
             technologies_attributes: [:name]
+            
         )
     end  
 end
