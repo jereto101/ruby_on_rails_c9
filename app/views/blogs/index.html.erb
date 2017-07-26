@@ -1,19 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8 blog-main">
+  <%= render @blogs %>
 
-<h1>Blogs</h1>
+  <%= paginate @blogs %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Blog Title</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @blogs %>
-  </tbody>
-</table>
+</div>
 
 <br>
 

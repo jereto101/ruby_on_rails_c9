@@ -1,0 +1,38 @@
+<div class="navbar navbar-inverse bg-inverse">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</div>
+
+<body>
+  <div class="collapse bg-inverse" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 py-4">
+          <h4 class="text-white">Pages</h4>
+          <ol class="list-unstyled">
+            <%= nav_helper 'text-white', 'li' %>
+            <%= portfolio_login_helper %>
+          </ol>
+        </div>
+        <div class="col-sm-4 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">If you cant read these portfolios, you arent alone. Dont worry, Google cant either.</p>
+        </div>
+        <div class="col-sm-4 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ol class="list-unstyled social-links">
+            <li><a href="#" class="text-white"><%= fa_stacked_icon "github" %> Github</a></li>
+            <li><a href="#" class="text-white"><%= fa_stacked_icon "twitter"%> Twitter</a></li>
+            <li><a href="#" class="text-white"><%= fa_stacked_icon "facebook"%> Facebook</a></li>
+            <li><a href="#" class="text-white"><%= fa_stacked_icon "youtube"%> Youtube</a></li>
+            <li><a href="#" class="text-white"><%= fa_stacked_icon "ra"%></a> / <a href="#" class="text-white"><%= fa_stacked_icon "first-order"%></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
