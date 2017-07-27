@@ -4,9 +4,14 @@
   <title>Portfolio Items</title>
 </head>
 
+
+
 <%= render partial: 'portfolio_nav'%>
 
-<%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+<%= yield %>
+
+<%= render partial: 'portfolio_masthead' unless logged_in?(:site_admin) %>
+
 
 <% if logged_in?(:site_admin) %>
 <%= link_to "Create New Item", new_portfolio_path, class: "btn btn-success btn-right" %>
