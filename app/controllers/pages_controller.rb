@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def contact
   end
+  
+  def password_update
+  end
 end

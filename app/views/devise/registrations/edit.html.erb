@@ -51,7 +51,8 @@
           <% if current_user.role == :site_admin %>
              <p>You are a Site Admin </p>
           <% else %>
-            <p>You are a not a Site Admin </p>
+            <p>You are a User </p>
+            <p class="auth-links">Not correct? Click <%= link_to "here", update_params_path(resource_name) %> to change</p>
           <% end %>
         </p>
         

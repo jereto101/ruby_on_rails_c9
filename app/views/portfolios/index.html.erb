@@ -1,5 +1,22 @@
-<h1>Portfolio Items</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portfolio Items</title>
+</head>
 
-<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin)%>
+<%= render partial: 'portfolio_nav'%>
 
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+
+<% if logged_in?(:site_admin) %>
+<%= link_to "Create New Item", new_portfolio_path, class: "btn btn-success btn-right" %>
+<br><br><br>
+<% end %>
+
+<div class="album text-muted">
+  <div class="container">
+    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>
