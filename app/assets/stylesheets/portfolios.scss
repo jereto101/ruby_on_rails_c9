@@ -5,6 +5,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "jquery-ui";
+@import "gritter";
 
 /*
  * Globals
@@ -191,4 +192,8 @@ body {
 
 .portfolio-container {
   padding-top: 30px;
+}
+
+.card {
+  margin: 0.5em .75em;
 }

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   
   get 'update_params', to: 'pages#update'
+  
+  # get 'tech-news', to: 'pages#tech_news'
 
   resources :portfolios, except: [:show]
   get 'angular-items', to: 'portfolios#angular'
