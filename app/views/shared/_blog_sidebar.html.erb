@@ -1,16 +1,23 @@
-<div class="col-sm-3 offset-sm-1 blog-sidebar">
+<div class="col-md-3 offset-sm-1 blog-sidebar">
   <div class="sidebar-module sidebar-module-inset">
     <h4>About</h4>
     <p>If you cant read the blog posts, you are not alone. Google translate cant even read them.</p>
   </div>
+  
+  <h4>Topics</h4>
+    <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
+ 
   <div class="sidebar-module">
     <h4>Elsewhere</h4>
     <ol class="list-unstyled social-links">
-      <li><a href="#"><%= fa_stacked_icon "github" %> Github</a></li>
-      <li><a href="#"><%= fa_stacked_icon "twitter"%> Twitter</a></li>
-      <li><a href="#"><%= fa_stacked_icon "facebook"%> Facebook</a></li>
-      <li><a href="#"><%= fa_stacked_icon "youtube"%> Youtube</a></li>
-      <li><a href="#"><%= fa_stacked_icon "ra"%></a> / <a href="#"><%= fa_stacked_icon "first-order"%></a></li>
+      <li><a href="https://github.com/jereto101/ruby_on_rails_c9"><%= fa_stacked_icon "github" %> Github</a></li>
+      <li><a href="http://www.twitter.com/"><%= fa_stacked_icon "twitter"%> Twitter</a></li>
+      <li><a href="http://www.facebook.com/"><%= fa_stacked_icon "facebook"%> Facebook</a></li>
+      <li><a href="http://www.youtube.com/"><%= fa_stacked_icon "youtube"%> Youtube</a></li>
+      <li><a href="http://www.starwars.com/"><%= fa_stacked_icon "ra"%></a> / <a href="http://www.starwars.com/"><%= fa_stacked_icon "first-order"%></a></li>
     </ol>
   </div>
 </div>

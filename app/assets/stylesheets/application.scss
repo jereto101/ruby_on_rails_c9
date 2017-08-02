@@ -164,6 +164,10 @@ body {
  * Custom Styles
  */
 
+.card{
+  background-color: rgba(255, 255, 255, .75);
+}
+
 .card-block {
   color: black;
   text-align: left;
@@ -199,7 +203,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('NP7iDOL.gif') repeat;
+  background: image_url('giphy_34.gif') repeat;
   background-size: cover;
 }
 
@@ -218,4 +222,14 @@ body {
 
 .tech-news a {
   color: green;
+}
+
+.transpararent{
+  opacity: .75;
+}
+.untranspararent{
+  opacity: 10000000000000;
+}
+.center-text{
+  text-align: center;
 }

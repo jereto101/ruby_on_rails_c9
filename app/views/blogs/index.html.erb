@@ -1,10 +1,13 @@
-<div class="col-sm-8 blog-main">
-  <%= render @blogs %>
-
-  <%= paginate @blogs %>
-
+<div class="col-md-8 blog-main">
+    <%= link_to 'New Blog', new_blog_path, class:"btn btn-primary" if logged_in?(:site_admin)%>
+    
+    <p></p>
+    
+    <%= render @blogs %>
+    
+    <%= paginate @blogs %>
+    
 </div>
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin)%>

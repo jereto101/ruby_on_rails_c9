@@ -162,6 +162,7 @@ h6, .h6 {
 .blog-footer {
   padding: 2.5rem 0;
   color: #999;
+  margin-top: 20px;
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
@@ -173,3 +174,34 @@ h6, .h6 {
 /*
  * custom styles
  */
+// #background {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   -webkit-transform: translateX(-50%) translateY(-50%);
+//   transform: translateX(-50%) translateY(-50%);
+//   background: image_url('giphy_20.gif') repeat;
+//   background-size: cover;
+// }
+
+.social-links li {
+  font-size: 1.5em;
+}
+
+.comment-card > .card {
+  margin-top: 15px;
+}
+
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+}
+
+.comment-name {
+  font-weight: 700;
+}
