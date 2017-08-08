@@ -29,13 +29,23 @@ a:hover {
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  // text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+}
+ 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -165,7 +175,7 @@ body {
  */
 
 .card{
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, .85);
 }
 
 .card-block {
@@ -225,11 +235,31 @@ body {
 }
 
 .transpararent{
-  opacity: .75;
+  opacity: .8;
 }
 .untranspararent{
   opacity: 10000000000000;
 }
 .center-text{
   text-align: center;
+}
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.skill {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.extra-padding{
+  padding: 20px;
+}
+.progress{
+  background-color: #D3D3D3;
+}
+.text-color{
+  color: black;
+}
+.register-text{
+  color: black;
 }

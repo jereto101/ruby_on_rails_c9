@@ -1,3 +1,4 @@
+<%= render "portfolio_nav" %>
 <div class="card panel transparenty" >
   <div class="card-block">
     <div class="portfolio-container">
@@ -8,11 +9,7 @@
     
         <div class="col-md-5">
           <h1><%= @portfolio_item.title %></h1>
-          
-          <p>
-            <%= @blog.topic.title %>
-          </p>
-          
+
           <hr>
     
           <em><%= @portfolio_item.subtitle %></em>
@@ -20,14 +17,18 @@
           <p><%= @portfolio_item.body %></p>
     
           <hr>
-    
-          <h3>Technologies Used:</h3>
-    
+          
+          <% if Technology %>
+            <h3>Technologies Used:</h3>
+          <% end %>
+          
           <% @portfolio_item.technologies.each do |t| %>
           <p><%= t.name %></p>
           <% end %>
-          <%= link_to 'Edit', edit_portfolio_path, class: "btn btn-success" %>
-          <%= link_to 'Back', :back, class: "btn btn-danger" %>
+          <% if logged_in?(:site_admin) %>
+            <%= link_to 'Edit', edit_portfolio_path, class: "btn btn-success" %>
+            <%= link_to 'Back', :back, class: "btn btn-danger" %>
+          <% end %>
         </div>
       </div>
     </div>

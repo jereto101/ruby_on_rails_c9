@@ -10,11 +10,12 @@
 
 <%= yield %>
 
-<%= render partial: 'portfolio_masthead' unless logged_in?(:site_admin) %>
-
+<div class="transparenty">
+  <%= render partial: 'portfolio_masthead' unless logged_in?(:site_admin) %>
+</div>
 
 <% if logged_in?(:site_admin) %>
-<%= link_to "Create New Item", new_portfolio_path, class: "transparenty btn btn-success btn-right" %>
+<%= link_to "Create New Item", new_portfolio_path, class: "btn btn-success btn-right" %>
 <br><br><br>
 <% end %>
 

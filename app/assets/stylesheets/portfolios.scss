@@ -11,7 +11,15 @@
  * Globals
  */
  
+@font-face {
+  font-family: 'Lato';
+  src:font-url('Lato-Regular.ttf');
+}
 
+@font-face {
+  font-family: 'Roboto Slab';
+  src:font-url('RobotoSlab-Regular.ttf');
+}
 
 /* Links */
 a,
@@ -52,6 +60,7 @@ body {
   height: auto;
   background: image_url('giphy_20.gif') no-repeat;
   background-size: cover;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -205,7 +214,8 @@ body {
 }
 
 .card {
-  margin: 0.5em .75em;
+  margin: 0.5em .75em .5em .75em;
+  width: 100%;
 }
 
 .transparenty{
@@ -213,5 +223,15 @@ body {
 }
 
 .panel{
-  margin: 10em;
+  margin: 130px auto;
+  width: 50%;
 }
+
+// h1, .h1,
+// h2, .h2,
+// h3, .h3,
+// h4, .h4,
+// h5, .h5,
+// h6, .h6 {
+//   font-family: 'Roboto Slab', serif;
+// }

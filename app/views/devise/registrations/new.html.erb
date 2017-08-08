@@ -1,3 +1,8 @@
+<style>
+  a {
+    color:black;
+  }
+</style>
 <div class="card">
   
   <div class="card-block">
@@ -42,7 +47,9 @@
           
         </div>
         
-        <div class="actions">
+        <p></p>
+        
+        <div class="actions", style="align: right;">
           <%= f.submit "Sign up", class: 'btn btn-primary' %>
         </div>
         
@@ -50,14 +57,18 @@
       
       <p></p>
       
-    <div class="auth-links">
-      <%= link_to "Back", :back %>
-    </div>
-    
-    <div class="register-text", style= "text-align: center;">
-      <%= render "devise/shared/links" %>
-    </div>
-    
+      <div class="row", style="text-align: center;">
+        <div class="col-md-6", style="text-align: right;">
+          <div class="register-text", style= "text-align: right;">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+        <div class="col-md-6", style="text-align: left;">
+          <div class="auth-links", style= "text-align: left;">
+            <%= link_to "Back", :back %>
+          </div>
+        </div>
+      </div>
   </div>
   
 </div>
